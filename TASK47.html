@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cart = [
+            { item: "Laptop", price: 995.55 },
+            { item: "Clothes", price: 5000.55 },
+            { item: "Keyboard", price: 85.75},
+            { item: "Phones", price: 350.05}
+        ];
+
+        function calculateTotal(cartArray) {
+            let total = 0;
+
+            for (let i = 0; i < cartArray.length; i++) {
+                total += cartArray[i].price;
+            }
+
+            return total;
+        }
+
+        const totalPrice = calculateTotal(cart);
+        console.log(totalPrice);
+    </script>
+    
+</body>
+</html>

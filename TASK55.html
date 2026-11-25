@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const gradebook = {
+            grades: [75, 95, 55],
+
+            addGrade(grade) {
+                this.grades.push(grade);
+            },
+
+            getAverage() {
+                if (this.grades .length === 0) return 0;
+
+                let sum = 0;
+                for (let i = 0; i < this.grades.length; i++) {
+                    sum += this.grades[i];
+                }
+                return sum / this.grades.length;
+            },
+
+            getMin() {
+                if (this.grades.length === 0) return null;
+                return Math.min(...this.grades);
+            },
+
+            getMax() {
+                if (this.grades.length === 0) return null;
+                return Math.max(...this.grades);
+            }
+        };
+
+
+        gradebook.addGrade(96);
+        gradebook.addGrade(105);
+
+
+        console.log("Grades:", gradebook.grades);
+        console.log("Average:", gradebook.getAverage());
+        console.log("Min:", gradebook.getMin());
+        console.log("Max:", gradebook.getMax());
+    </script>
+    
+</body>
+</html>

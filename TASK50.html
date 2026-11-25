@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const tasks = [];
+
+        function addTask(task) {
+            tasks.push(task);
+        }
+
+        function removeTask(index) {
+            tasks.splice(index, 1);
+        }
+
+        function listTasks() {
+            for (let i = 0; i < tasks.length; i++) {
+                console.log(`${i}: ${tasks[i]}`);
+            }
+        }
+
+        addTask("Buy Provision");
+        addTask("Clean the kitchen");
+        addTask("Pay electricity bill");
+
+    
+        removeTask(1);
+
+        listTasks();
+    </script>
+    
+</body>
+</html>

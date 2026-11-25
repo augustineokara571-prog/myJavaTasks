@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const people = [
+            { name: "Emma", age: 16},
+            { name: "Austin", age: 22},
+            { name: "Moses", age: 15},
+            { name: "John", age: 35}
+        ];
+
+        function filterAdults(arr) {
+            const adults = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].age >= 18) {
+                    adults.push(arr[i]);
+                }
+            }
+            return adults;
+        }
+
+        const adultsList = filterAdults(people);
+        console.log(adultsList);
+    </script>
+    
+</body>
+</html>

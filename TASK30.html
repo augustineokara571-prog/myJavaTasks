@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const names = ["Austin", "Emma", "Charlie", "David", "Moses"];
+
+        const searchName = "Charlie";
+
+        let isFound = false;
+
+        for (let i = 0; i < names.length; i++) {
+            if (names[i] === searchName) {
+                isFound = true;
+                break;
+            }
+        }
+
+        if (isFound) {
+            console.log(`${searchName} found!`);
+        } else {
+            console.log(`${searchName} not found.`);
+        }
+    </script>
+    
+</body>
+</html>

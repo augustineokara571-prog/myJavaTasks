@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+            const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            let reverse = cleaned.split('').reverse().join('');
+
+            return cleaned === reverse;
+        }
+
+        console.log(isPalindrome("racecar"));
+        console.log(isPalindrome("A man a plan a canal Panama"));
+        console.log(isPalindrome("hello"));
+    </script>
+    
+</body>
+</html>
